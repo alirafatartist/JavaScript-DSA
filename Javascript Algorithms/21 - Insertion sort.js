@@ -22,8 +22,8 @@ console.log(insertionSort([-6, 20, 8, -2, 4]));
 // my self
 function insertionSort2(arr) {
   for (let i = 1; i < arr.length; i++) {
-    let current = arr[i];
-    let j = i - 1;
+    let current = arr[i]; // pointer 1
+    let j = i - 1; //  pointer 2
 
     while (arr[j] > current) {
       let temp;
