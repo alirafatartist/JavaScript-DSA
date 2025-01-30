@@ -15,5 +15,27 @@ function insertionSort(arr) {
   }
   return arr;
 }
+// Big-O = O(n^2)
 
 console.log(insertionSort([-6, 20, 8, -2, 4]));
+
+// my self
+function insertionSort2(arr) {
+  for (let i = 1; i < arr.length; i++) {
+    let current = arr[i];
+    let j = i - 1;
+
+    while (arr[j] > current) {
+      let temp;
+      temp = arr[j];
+      arr[j] = current;
+      arr[j + 1] = temp;
+      j--;
+    }
+  }
+  return arr;
+}
+// Big-O = O(n^2)
+
+const arr = [5, 2, 9, 1, 5, 6];
+console.log(insertionSort2(arr)); // Output: [1, 2, 5, 5, 6, 9]
